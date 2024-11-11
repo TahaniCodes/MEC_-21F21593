@@ -1,0 +1,14 @@
+import java.util.Scanner;
+public class SimpleRestaurantBillCalculator {
+public static void main(String[] args) {
+Scanner scanner = new Scanner(System.in);System.out.print("Enter the meal cost: $");
+double mealCost = scanner.nextDouble();
+System.out.print("Enter the tax amount: $");
+double tax = scanner.nextDouble();
+System.out.print("Enter the tip amount: $");
+double tip = scanner.nextDouble();
+double totalBill = mealCost + tax + tip;
+System.out.printf("Total Bill: ", totalBill);
+scanner.close();
+    }
+}

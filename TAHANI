@@ -12,3 +12,23 @@ System.out.printf("Total Bill: ", totalBill);
 scanner.close();
     }
 }
+import java.util.Scanner;
+public class SimpleRestaurantBillCalculator {
+public static void main(String[] args) {
+Scanner scanner = new Scanner(System.in);
+System.out.print("Enter the meal cost: ");
+double mealCost = scanner.nextDouble();
+System.out.print("Enter the tax amount: ");
+double tax = scanner.nextDouble();
+System.out.print("Enter the tip amount: ");
+double tip = scanner.nextDouble();
+double totalBill = mealCost + tax + tip;
+if (totalBill > 50) {
+double discount = totalBill * 0.05; // 5% discount
+totalBill -= discount;
+ System.out.printf("A 5%% discount of $%.2f has been applied.%n", discount);
+        }
+        System.out.printf("Total Bill after discount (if applicable): $%.2f%n", totalBill);
+        scanner.close();
+    }
+}
